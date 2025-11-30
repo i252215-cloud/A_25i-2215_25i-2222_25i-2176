@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toy Planet Cart</title>
+    <style>
+        
+    </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="cart_page.css">
+</head>
+<body>
+
+    <div class="page-wrapper">
+        <header class="cart-header">
+            <div class="header-left">
+                <button class="back-btn"><i class="fas fa-arrow-left"></i></button>
+                <img src="https://i.ibb.co/nqwmpCdg/Toy-Planet-Logo.png" alt="Toy Planet Logo" class="logo">
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" placeholder="Search ">
+                    <i class="fas fa-search"></i>
+                </div>
+                <i class="fa-solid fa-envelope icon"></i>
+                <i class="fa-solid fa-user icon"></i>
+                <i class="fa-solid fa-shopping-cart icon"></i>
+            </div>
+        </header>
+      <!--1 class="cart-title">Your Cart</h1>-->
+
+        <div class="cart-container">
+             <h1 class="cart-title">Your Cart</h1>
+            
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th class="items-col">Items</th>
+                        <th class="price-col">Price</th>
+                        <th class="quantity-col">Quantity</th>
+                        <th class="total-col">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="item-details">
+                            <img src="https://i.ibb.co/7J3sm3g1/pack-of-twenty-cars.png" alt="pack of twenty cars" class="item-img">
+                            <span>pack of twenty cars</span>
+                        </td>
+                        <td class="price-data">$100</td>
+                        <td class="quantity-data">
+                            <div class="quantity-control">
+                                <button class="qty-btn">-</button>
+                                <input type="text" value="1" class="qty-input">
+                                <button class="qty-btn">+</button>
+                            </div>
+                        </td>
+                        <td class="total-price-data">$100</td>
+                    </tr>
+                    <tr>
+                        <td class="item-details">
+                            <img src="https://i.ibb.co/93Hr9xxF/lego.png" alt="3 in 1 Lego set" class="item-img">
+                            <span>3 in 1 Lego set</span>
+                        </td>
+                        <td class="price-data">$200</td>
+                        <td class="quantity-data">
+                            <div class="quantity-control">
+                                <button class="qty-btn">-</button>
+                                <input type="text" value="1" class="qty-input">
+                                <button class="qty-btn">+</button>
+                            </div>
+                        </td>
+                        <td class="total-price-data">$200</td>
+                    </tr>
+                    <tr>
+                        <td class="item-details">
+                            <img src="https://i.ibb.co/wfgJ5Z5/teddy.png" alt="Teddy bears" class="item-img">
+                            <span>Teddy bears</span>
+                        </td>
+                        <td class="price-data">$50</td>
+                        <td class="quantity-data">
+                            <div class="quantity-control">
+                                <button class="qty-btn">-</button>
+                                <input type="text" value="1" class="qty-input">
+                                <button class="qty-btn">+</button>
+                            </div>
+                        </td>
+                        <td class="total-price-data">$50</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="summary-checkout-wrapper">
+                <div class="summary-card">
+                    <div class="summary-line">
+                        <span>Sub total</span>
+                        <span>$350</span>
+                    </div>
+                    <div class="summary-line">
+                        <span>Sales Tax</span>
+                        <span>$50</span>
+                    </div>
+                    <hr class="summary-divider">
+                    <div class="summary-line grand-total">
+                      <!--  <strong>Grand Total</strong>-->
+                        <p>Grand Total</p>
+                        <strong class="grand-total-amount">$400</strong>
+
+                     <!--   <strong>$400</strong> -->
+                    </div>
+                    <p class="shipping-message">Congrats, you're eligible for **Free Shipping**</p>
+                    
+                    <button class="checkout-btn">Check out</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="cart_page.js"></script>
+</body>
+</html>
