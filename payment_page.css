@@ -1,0 +1,153 @@
+body {
+    margin: 120px;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    padding: 20px 40px;
+    gap: 40px;
+}
+
+.logo-back {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+.back-btn {
+    border: none;
+    background: #f0f0f0;
+    padding: 8px 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.back-btn i {
+    color: #333;
+}
+
+.back-btn:hover {
+    background: #ff6600;
+}
+
+.back-btn:hover i {
+    color: #fff;
+}
+
+.logo {
+    height: 100px;
+    width: 180;
+}
+.left {
+    width: 50%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/*.logo {
+    width: 120px;
+}
+*/
+.price {
+    font-size: 30px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+}
+
+.item img {
+    width: 70px;
+    margin-right: 15px;
+}
+
+.item span.amount {
+    margin-left: auto;
+    font-weight: bold;
+}
+
+.item p span {
+    color: gray;
+    font-size: 14px;
+}
+
+.summary {
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.summary span {
+    float: right;
+}
+
+.total-line {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.right {
+    width: 50%;
+    background: #ffe1e1;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.apple-pay {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    font-size: 20px;
+    border-radius: 7px;
+}
+
+.or-line {
+    text-align: center;
+    margin: 1px 0;
+    font-size: 14px;
+}
+
+form h3 {
+    margin-bottom: 1px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 22px 0;
+    border: none;
+    border-radius: 40px;
+}
+
+.checkbox {
+    display: flex;
+    gap: 1px;
+    font-size: 14px;
+    margin: 10px 0;
+    align-items: center;
+    
+}
+
+
+
+.pay-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    background: black;
+    color: white;
+    border: none;
+    font-size: 12px;
+    border-radius: 3px;
+}
