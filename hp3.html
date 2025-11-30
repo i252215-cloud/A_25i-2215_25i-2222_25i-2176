@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toy Planet</title>
+
+<style>
+    body{
+        margin:0;
+        font-family: "Poppins", sans-serif;
+        background:#fafafa;
+        display: flex;
+    }
+
+    /* -------- VERTICAL NAVIGATION BAR -------- */
+    .navbar{
+        width: 200px;
+        height: 100vh;
+        background:#ffd6df;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 3px 0px 10px rgba(0,0,0,0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        border-radius: 0 30px 30px 0;
+    }
+    .nav-logo{
+        font-size: 26px;
+        font-weight: 700;
+        color: #ff4fa7;
+        font-family: "Comic Sans MS", cursive;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+
+   
+
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links a{
+        text-decoration: none;
+        padding: 15px 25px;
+        color: #333;
+        font-size: 15px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border-left: 3px solid transparent;
+    }
+
+    .nav-links a:hover{
+        color: #ff4fa7;
+        background: rgba(255, 255, 255, 0.3);
+        border-left: 3px solid #ff4fa7;
+    }
+
+    .nav-links a.active {
+        color: #ff4fa7;
+        background: rgba(255, 255, 255, 0.5);
+        border-left: 3px solid #ff4fa7;
+    }
+
+    /* Main Content Area */
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+        padding: 40px;
+        text-align: center;
+    }
+
+    .search-box{
+        width:350px;
+        background:#c9f5ff;
+        padding:10px;
+        border-radius:30px;
+        margin:auto;
+        margin-bottom:50px;
+        box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+    }
+
+    .search-box input{
+        width:100%;
+        border:none;
+        background:none;
+        font-size:16px;
+        outline:none;
+        text-align:center;
+    }
+
+    .heading-big{
+        font-family: "Comic Sans MS", cursive;
+        font-size:55px;
+        color:#ff79c7;
+        margin-top:20px;
+        text-transform:lowercase;
+    }
+
+    .toy-img{
+        width:260px;
+        height:260px;
+        border-radius:30px;
+        margin-top:20px;
+        object-fit:cover;
+        box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+    }
+
+    /* Content sections */
+    .content-section {
+        display: none;
+    }
+
+    .content-section.active {
+        display: block;
+        animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .navbar {
+            width: 70px;
+        }
+        
+        .nav-logo {
+            font-size: 16px;
+        }
+        
+        .nav-links a {
+            padding: 15px 10px;
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        .nav-links a span {
+            display: none;
+        }
+        
+        .main-content {
+            margin-left: 70px;
+            width: calc(100% - 70px);
+            padding: 20px;
+        }
+        
+        .search-box {
+            width: 90%;
+        }
+        
+        .heading-big {
+            font-size: 40px;
+        }
+    }
+</style>
+
+</head>
+<body>
+
+<!-- ---------------- VERTICAL NAVIGATION BAR ---------------- -->
+<div class="navbar">
+    <div class="nav-logo">ToyPlanet</div>
+    
+    <div class="nav-links">
+        <a href="#" class="active"><span>HOME</span></a>
+        <a href="#"><span>CATEGORIES</span></a>
+        <a href="#"><span>TOP SELLERS</span></a>
+        <a href="#"><span>YOUR CART</span></a>
+        <a href="#"><span>ABOUT</span></a>
+        <a href="#"><span>CONTACT</span></a>
+    </div>
+</div>
+
+<!-- ---------------- MAIN CONTENT ---------------- -->
+<div class="main-content">
+
+    <div class="search-box">
+        <input type="text" placeholder="search here..." id="searchText">
+    </div>
+
+    <!-- Home Section -->
+    <div class="content-section active" id="home-section">
+        <div class="heading-big">cute toys for</div>
+        <div class="heading-big">cute kids</div>
+        <img src="https://www.jiomart.com/images/product/original/rvog4k8pv7/crispy-toys-soft-toys-for-pink-rabbit-girl-so-cute-baby-doll-plush-soft-toys-for-girls-adult-30-cm-product-images-orvog4k8pv7-p609152071-0-202405310136.jpg?im=Resize=(1000,1000)" class="toy-img">
+    </div>
+
+
+    <!-- About Section -->
+    <div class="content-section" id="about-section">
+        <div class="heading-big">about us</div>
+        <p style="max-width: 600px; margin: 30px auto; line-height: 1.6; font-size: 16px;">
+            Welcome to Toy Planet, your one-stop destination for the best toys for kids of all ages! 
+            We believe in the power of play to inspire creativity, learning, and joy. 
+            Our carefully curated collection includes everything from educational toys to the latest action figures.
+        </p>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="content-section" id="contact-section">
+        <div class="heading-big">contact us</div>
+        <div style="display: flex; justify-content: center; gap: 30px; margin-top: 40px; flex-wrap: wrap;">
+            <div style="text-align: center;">
+                <h3>Address</h3>
+                <p>123 Play Street<br>Toyland, TL 12345</p>
+            </div>
+            <div style="text-align: center;">
+                <h3>Phone</h3>
+                <p>(555) 123-TOYS</p>
+            </div>
+            <div style="text-align: center;">
+                <h3>Email</h3>
+                <p>info@toyplanet.com</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ---------------- JAVASCRIPT ---------------- -->
+<script>
+    // Simple search popup
+    document.getElementById("searchText").addEventListener("keypress", function(e){
+        if(e.key === "Enter"){
+            alert("You searched: " + this.value);
+        }
+    });
+
+    // Navigation functionality
+    document.querySelectorAll('.nav-links a').forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all items
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            // Add active class to clicked item
+            this.classList.add('active');
+            
+            // Hide all content sections
+            document.querySelectorAll('.content-section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show the selected content section
+            const linkText = this.textContent.trim();
+            let sectionId = '';
+            
+            switch(linkText) {
+                case 'HOME':
+                    sectionId = 'home-section';
+                    break;
+                case 'CATEGORIES':
+                    sectionId = 'categories-section';
+                    break;
+                case 'TOP SELLERS':
+                    sectionId = 'top-sellers-section';
+                    break;
+                case 'YOUR CART':
+                    sectionId = 'cart-section';
+                    break;
+                case 'PAYMENT':
+                    sectionId = 'payment-section';
+                    break;
+                case 'ABOUT':
+                    sectionId = 'about-section';
+                    break;
+                case 'CONTACT':
+                    sectionId = 'contact-section';
+                    break;
+            }
+            
+            if(sectionId) {
+                document.getElementById(sectionId).classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>

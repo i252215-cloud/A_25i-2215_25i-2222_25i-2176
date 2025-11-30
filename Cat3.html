@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Categories</title>
+
+<style>
+    body{
+        margin:0;
+        padding:0;
+        background:#f2f2f2;
+        font-family:"Poppins", sans-serif;
+        display: flex;
+    }
+    
+    /* ---------------------- VERTICAL NAVIGATION BAR ---------------------- */
+    .navbar{
+        width: 200px;
+        height: 100vh;
+        background:#ffd6df;
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 3px 0px 10px rgba(0,0,0,0.1);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+    }
+
+    .nav-logo{
+        font-size: 26px;
+        font-weight: 700;
+        color: #ff4fa7;
+        font-family:"Comic Sans MS", cursive;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links a{
+        text-decoration: none;
+        padding: 15px 25px;
+        color: #333;
+        font-size: 15px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        border-left: 3px solid transparent;
+    }
+
+    .nav-links a:hover{
+        color: #ff4fa7;
+        background: rgba(255, 255, 255, 0.3);
+        border-left: 3px solid #ff4fa7;
+    }
+
+    .nav-links a.active {
+        color: #ff4fa7;
+        background: rgba(255, 255, 255, 0.5);
+        border-left: 3px solid #ff4fa7;
+    }
+
+    /* Main Content Area */
+    .main-content {
+        margin-left: 200px;
+        width: calc(100% - 200px);
+    }
+
+    .container{
+        width:100%;
+        background:#ffd6df;
+        padding:40px 0;
+        text-align:center;
+    }
+
+    .title{
+        font-size:50px;
+        font-family:"Comic Sans MS", cursive;
+        color:#ff66c4;
+        margin-bottom:40px;
+    }
+
+    .grid{
+        width:90%;
+        margin:auto;
+        display:grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap:60px;
+        column-gap:50px;
+        justify-items:center;
+    }
+
+    .category{
+        text-align:center;
+        cursor: pointer;
+    }
+
+    .category img{
+        width:260px;
+        height:220px;
+        object-fit:cover;
+        border-radius:12px;
+        transition:0.3s;
+    }
+
+    .category img:hover{
+        transform:scale(1.05);
+    }
+
+    .cat-title{
+        margin-top:12px;
+        font-size:20px;
+        letter-spacing:2px;
+        font-weight:500;
+    }
+
+    /* second row smaller grid */
+    .grid-second{
+        width:60%;
+        margin:40px auto 0 auto;
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap:40px;
+        justify-items:center;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1100px) {
+        .grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .navbar {
+            width: 70px;
+        }
+        
+        .nav-logo {
+            font-size: 16px;
+        }
+        
+        .nav-links a {
+            padding: 15px 10px;
+            font-size: 12px;
+            text-align: center;
+        }
+        
+        .nav-links a span {
+            display: none;
+        }
+        
+        .main-content {
+            margin-left: 70px;
+            width: calc(100% - 70px);
+        }
+        
+        .grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .grid-second {
+            width: 90%;
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+</head>
+<body>
+
+<!-- Vertical Navigation Bar -->
+<div class="navbar">
+    <div class="nav-logo">ToyPlanet</div>
+    
+    <div class="nav-links">
+        <a href="#"><span>HOME</span></a>
+        <a href="#" class="active"><span>CATEGORIES</span></a>
+        <a href="#"><span>TOP SELLERS</span></a>
+        <a href="#"><span>YOUR CART</span></a>
+        <a href="#"><span>ABOUT</span></a>
+        <a href="#"><span>CONTACT</span></a>
+
+    </div>
+</div>
+
+<!-- Main Content Area -->
+<div class="main-content">
+    <div class="container">
+        <div class="title">All Categories</div>
+
+        <!-- FIRST ROW -->
+        <div class="grid">
+            <div class="category">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/eu_articles_disneystore_introducting_mobhero_95b35962.jpeg?region=0,0,750,564">
+                <div class="cat-title">DISNEY</div>
+            </div>
+
+            <div class="category">
+                <img src="https://cdn.thewirecutter.com/wp-content/media/2023/07/lego-sets-kids-2048px-2045.jpg">
+                <div class="cat-title">LEGO</div>
+            </div>
+
+            <div class="category">
+                <img src="https://m.media-amazon.com/images/I/81boGvnLGyL._AC_SL1500_.jpg">
+                <div class="cat-title">PUZZLES</div>
+            </div>
+        </div>
+
+        <!-- SECOND ROW -->
+        <div class="grid-second">
+            <div class="category">
+                <img src="https://mybtoys.com/wp-content/uploads/BX1791_LS_B.jpg">
+                <div class="cat-title">VEHICLES</div>
+            </div>
+
+            <div class="category">
+                <img src="https://toynix.pk/cdn/shop/files/10.png?v=1753881512&width=533">
+                <div class="cat-title">SOFT TOYS</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript (optional highlight on click) -->
+<script>
+    const items = document.querySelectorAll(".category");
+
+    items.forEach(item => {
+        item.addEventListener("click", () => {
+            alert("You selected: " + item.innerText);
+        });
+    });
+    
+    // Add active class to clicked nav item
+    document.querySelectorAll('.nav-links a').forEach(item => {
+        item.addEventListener('click', function() {
+            document.querySelectorAll('.nav-links a').forEach(link => {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
+        });
+    });
+</script>
+
+</body>
+</html>
